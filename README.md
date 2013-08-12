@@ -1,2 +1,5 @@
-OOFrontEndModules
+OO Front-End Modules
 =================
+Web pages can be divided into one or more pieces/modules/widgets/blocks.  Some examples include a site header, a drop down menu, an image, and a link.  They will be composed of some markup (HTML), and possibly some styles (CSS), some behavior (JavaScript), and/or some controlling logic (PHP or whatever).  The goal of this project is to create a system to manage each of these modules as individual objects, with all that is required for a given module grouped together or inherited from another module or included inside a module from another.
+
+The project takes ideas and inspiration from [BEM](http://bem.info/method/), [SMACSS](http://smacss.com/), [OOCSS](http://oocss.org/), [Qooxdoo Widgets](http://demo.qooxdoo.org/current/apiviewer/#qx.ui), and other sources.  This project is in its infancy.  I hope it can be useful to myself and others.  Some discussion of the project by its developers can be found on [this wiki](http://freelance.tobymackenzie.com/wiki/Web_Widgets)
