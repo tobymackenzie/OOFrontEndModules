@@ -10,4 +10,11 @@ Referencing assets may be like 'ComponentName/assetName' for components.  Someth
 
 A component can "subclass" another component.  Any supplied pieces will override those of the parent.  There will be a way to override the name of the parent version so that everything that uses that component by name will use the child / alternative component instead.
 
+Component can 'extend' multiple other components, getting their styles and behavior and possibly bringing in their content as well.
+
 This project can essentially replace the entire front end for a site.  Project users simply install, configure, build, and have their code pass data into and render components as needed.
+
+Classes are a special attribute.  Can be minimized.  JS well get classes from a map that will be changed on build.  CSS and HTML will simply have them replaced.  Classes will come from modules:
+- each module will have a class that is its name
+- each module can have states and options that will be appended to module name
+- site config defines what format these classes are output in (BEM, OOCSS, SMACSS, minified, etc)
