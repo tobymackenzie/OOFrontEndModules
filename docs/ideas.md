@@ -18,3 +18,11 @@ Classes are a special attribute.  Can be minimized.  JS well get classes from a 
 - each module will have a class that is its name
 - each module can have states and options that will be appended to module name
 - site config defines what format these classes are output in (BEM, OOCSS, SMACSS, minified, etc)
+
+Each component will define a controller type and a template type, or if supporting multiple, an array in order of preference, in its config.  Each supported language will have a renderer.  If a given component has a controller in the renderers language, it will use that.  Otherwise, it will see if it uses a renderer marked as available to the native renderer via config to be run via CLI.  Each renderer can have one or more templating engines available.  The renderer will also choose those in preferred order.
+
+names
+----------
+
+Each component must have a unique name that will not overlap for a renderer.  To help prevent overlap, a namespace system will be provided.  When referencing components, must use the name with the namespace prepended, with a separator character, or use some syntax to reference it relative to the current module.  Will likely use POSIX pathlike structure, like 'MyNS/MyModule' and './MyModule'.  A given module path will be put under a namespace, which can be specified in the main manager config.  May provide a pathwide config that specifies a default namespace, but the main manager config can override this.  Namespaces can have sub-namespaces for organization purposes.
+
